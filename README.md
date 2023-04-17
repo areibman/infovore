@@ -3,27 +3,6 @@
 Infovore is an open-source service that can read nearly any data and document format (structured or unstructured) and answer queries about the data in that document. It is designed to be extensible and easy to integrate with various data sources and formats.
 
 
-```mermaid
-graph TD
-    A[API] --> B[InputHandler]
-    B --> C[QueryEngine]
-    C --> D[QueryParser]
-    D --> E[QueryEvaluator]
-    E --> F[QueryResponseBuilder]
-    F --> G[OutputHandler]
-    G --> H[User]
-
-    I[Reader] --> J[FileReader]
-    J --> K[FormatParser]
-    K --> L[ContentExtractor]
-    L --> M[Processor]
-
-    M --> N[DataNormalizer]
-    N --> O[DataIndexer]
-    O --> P[Stored Data]
-    P --> E
-```
-
 ## Main Components
 
 1. **Reader**: Reads and parses different data/document formats
